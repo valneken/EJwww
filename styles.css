@@ -12,6 +12,30 @@ body {
     font-size: 1rem;
     line-height: 1.5;
 }
+
+/* playing + testing Remco */
+
+@keyframes rotateme {
+  0% {  transform: rotate3d(.4,1,.3,0deg); 
+    }
+  50% {  transform: rotate3d(.4,1,.3,180deg); 
+    }
+  100% {  transform: rotate3d(.4,1,.3,360deg); 
+    }
+} 
+   
+.navbar-brand img{
+/*    transform:rotate(180deg) scaleX(-1); */   
+    background-color:rgba(200,150,100,.3);
+    animation:rotateme 9s infinite linear;
+     box-shadow: 30px 40px 9px grey;
+    border-radius:10px;
+    }
+.navbar-brand img:hover { 
+    animation-play-state: paused;    
+}
+
+/* end of playing :-) */
 #page-wrapper,
 .header,
 body,
