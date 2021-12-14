@@ -1,6 +1,3 @@
-@charset "UTF-8";
-/* CSS Document */
-
 /* The following styles have to be corrected in the original stylesheets */
 /* Ensure that :focus style does not remove outline! Important for accessibility */
 /* a:active, button:active, button:focus:not(.navbar-toggler) {
@@ -14,10 +11,6 @@
 body {
     font-size: 1rem;
     line-height: 1.5;
-}
-::selection {
-    background-color: #985343;
-    color: white;
 }
 #page-wrapper,
 .header,
@@ -33,6 +26,12 @@ footer a {
 }
 *:focus {
     outline: 2px solid #985343;
+}
+::selection {
+    background-color: #985343;
+    color: white;
+    text-shadow:none;
+    background-image:none;
 }
 .form-control:focus {
     border-color: #985343;
@@ -132,7 +131,6 @@ ul ul {
 .field--taxonomies-tags .tags-label,
 .field--info-event .info-date a,
 .field--info-page .info-date {
-    color: #70706B;
     color: #061C28;
 }
 .paragraph__column .nav-tabs a.nav-link {
@@ -161,8 +159,8 @@ a:hover {
 .text-formatted a,
 .field--text-content a,
 .procurement-legal-notice a,
-.link,
-.link:hover,
+.content .link,
+.content .link:hover,
 .field--info-event .info-extra a,
 .field--taxonomies-tags .taxonomy-tag a {
     color: #985343;
@@ -276,8 +274,14 @@ a:hover {
 .paragraph__column .nav-tabs .nav-item {
     outline:0;
 }
+#navbar-main .nav-link, #navbar-main .link {
+    text-shadow: none;
+    background-image: none;
+    outline: 0;
+}
 .text-formatted a:focus,
-.paragraph--type--bp-tabs .text-formatted a:focus {
+.paragraph--type--bp-tabs .text-formatted a:focus,
+.content .link:focus {
     color: #fff;
     text-shadow: none;
     background-image: none;
