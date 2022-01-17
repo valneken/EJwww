@@ -357,6 +357,14 @@ body,
         padding-left: 1em;
     }
 }
+
+/* Search bar */
+#eurojust-search-block-form input[type="text"] {
+    padding: 5px;
+    border: 1px solid #dee2e6;
+    background-color: #E5E5E4;
+}
+
 /* Phones */
 @media (max-width: 576px) {
     .site-name-slogan {
