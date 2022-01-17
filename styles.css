@@ -7,36 +7,34 @@
 }
 */
 /* End */
-
 body {
     font-size: 1rem;
     line-height: 1.5;
 }
-
 #page-wrapper,
 .header,
 body,
 footer a {
-    color: #051d24;
+    color: #032025;
     /* this is body text dark enough for sufficient contrast to background and links on both light and darker background (tab content, contact box on press releases, cards, etc.) */
 }
 .site-name-slogan {
-    font-size: 1.2rem;
+    font-size: 1.075rem;
     font-weight: 400;
     max-width: 16rem;
 }
 *:focus {
-    outline: 2px solid #985343;
+    outline: 2px solid #A05646;
 }
 ::selection {
-    background-color: #985343;
+    background-color: #A05646;
     color: white;
-    text-shadow:none;
-    background-image:none;
+    text-shadow: none;
+    background-image: none;
 }
 .form-control:focus {
-    border-color: #985343;
-    box-shadow: 0 0 0 0.1rem #985343;
+    border-color: #A05646;
+    box-shadow: 0 0 0 0.1rem #A05646;
 }
 .view-mode-full .col-md-9.col-12,
 .view-mode-full .col-12.col-md-12.col-lg-9 {
@@ -47,7 +45,7 @@ footer a {
     font-size: .929em;
 }
 .breadcrumb.clearfix.px-2 {
-    margin: 1em 0;
+    margin: 0 0 1em;
     padding-left: 0.75rem!important;
 }
 h1,
@@ -56,18 +54,18 @@ h3,
 h4,
 h5,
 h6 {
-    color: #155773;
+    color: #205368;
     font-weight: 600;
     margin-bottom: 1em;
 }
 h1,
 h1 a,
 .h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
 }
 h2,
 .h2 {
-    font-size: 1.75rem;
+    font-size: 1.625rem;
 }
 h3,
 .h3 {
@@ -75,7 +73,7 @@ h3,
 }
 h4,
 .h4 {
-    font-size: 1.4rem;
+    font-size: 1.375rem;
 }
 h5,
 .h5 {
@@ -83,7 +81,11 @@ h5,
 }
 h6,
 .h6 {
-    font-size: 1.2rem;
+    font-size: 1.175rem;
+}
+h1 + h2,
+h2 + h3 {
+    margin-top: -0.5em;
 }
 #block-ectweets h2 {
     font-size: 1.25em;
@@ -94,13 +96,15 @@ h6,
 .site-footer h2 {
     font-weight: 400;
 }
+p + h2 {
+    margin-top: 1.25em;
+}
 h3.block-title {
     text-decoration: none;
 }
 .view-mode-tab_display h3,
 .view-mode-content_list_with_image h3,
 .view-ej-advanced-search h3,
-.view-in-focus h3,
 #block-eurojusthowcanhelpblock.block-eurojust-howcanhelp-block h3,
 h3.card-title,
 .sidebar h3 {
@@ -116,6 +120,12 @@ p + h3,
 ul + h3 {
     margin-top: 1.5em;
 }
+.view-in-focus.view-id-in_focus h3 {
+    margin-top: 0;
+    margin-bottom: .5em;
+    line-height: 1.3;
+    font-size: 1rem;
+}
 ol ol,
 ol ul,
 ul ol,
@@ -128,47 +138,49 @@ ul ul {
 .field--info-page {
     font-size: 0.9rem;
 }
-.field--info-event .info-date,
-.field--taxonomies-tags .tags-label,
-.field--info-event .info-date a,
-.field--info-page .info-date {
-    color: #061C28;
-}
 .paragraph__column .nav-tabs a.nav-link {
-    text-shadow: #464d53 1px 0px 0px, 0px 2px 2px rgb(51 22 14 / 0%);
+    text-shadow: #000 0px 0px 0px, 0px 2px 2px rgb(33 37 41 / 0%);
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs a.nav-link.active {
     color: #464D53;
-    text-shadow: #000 1px 0px 1px, 0px 2px 2px rgb(51 22 14 / 0%);
+    text-shadow: #000 1px 0px 0px, 0px 2px 2px rgb(33 37 41 / 0%);
+}
+.footer .nav-item {
+    line-height: 1.65;
+}
+.breadcrumb-item.active {
+    color: #6c757d;
 }
 a:hover {
-    color: #985343;
+    color: #A05646;
 }
+.field--info-event .info-date,
+.field--info-event .info-loc,
 .field--info-event .info-extra,
-.field--info-event .info-extra a,
-.field--name-field-contact-information p a,
-.field--taxonomies-tags .taxonomy-tag,
-.field--taxonomies-tags .taxonomy-tag a,
+.field--info-page .info-date,
 .field--info-page .info-extra,
-.menu-siblings ul > li a,
-.breadcrumb-item.active,
-.site-footer__top h2 {
-    color: #985343;
-    /* this provides for sufficient contrast to both the surrounding body text and the background, lighter and darker */
+.field--taxonomies-tags .tags-label,
+.field--taxonomies-tags .taxonomy-tag {
+    color: #656561;
 }
-.text-formatted a,
-.field--text-content a,
-.procurement-legal-notice a,
+.breadcrumb-item a,
 .content .link,
 .content .link:hover,
+.field--text-content a,
 .field--info-event .info-extra a,
-.field--taxonomies-tags .taxonomy-tag a {
-    color: #985343;
-    /* text-decoration: underline; */
+.field--name-field-contact-information p a,
+.field--taxonomies-tags .taxonomy-tag a,
+.menu-siblings ul > li a,
+.procurement-legal-notice a,
+.related-links .item-link,
+.related-links .item-link a,
+.text-formatted a,
+.site-footer__top h2 {
+    color: #A05646;
 }
 .back-to-top {
-    background-color: #985343;
+    background-color: #A05646;
 }
 .btn {
     text-decoration: none!important;
@@ -185,13 +197,12 @@ a:hover {
 .pagination .page-item:hover .page-link,
 .pagination [class^="pager"]:hover .page-link,
 .pagination .page-item.active .page-link {
-    background-color: #985343 !important;
+    background-color: #A05646 !important;
 }
 .pagination .page-item .page-link,
 .pagination [class^="pager"] .page-link {
     padding: 5px 8px;
 }
-
 /* FontAwesome icon to accompany outbound links */
 .maincontent-node a[href^="http://"]:not([href^="https://www.eurojust.europa.eu"]):after,
 .maincontent-node a[href^="https://"]:not([href^="https://www.eurojust.europa.eu"]):after {
@@ -211,51 +222,49 @@ a:hover {
     padding-left: .5em;
 }
 
-@media (max-width: 767px) {
-    .col-sm-12.col-md-12.col-lg-3.sidebar-node,
-    .menu-siblings ul {
-        padding-left: 0;
-    }
-    ul.menu.menu-level-1 {
-        padding-left: 1em;
-    }
-}
 /* Fancy link underline */
 .field--text-content a,
+.field--info-event .info-extra a,
 .taxonomy-tag a,
-.paragraph--type--bp-simple .text-formatted a, .link {
+.paragraph--type--bp-simple .text-formatted a,
+.link,
+.breadcrumb-item a {
     text-decoration: none;
-    text-shadow: 0.05em 0 0 #f6f6f6, -0.05em 0 0 #f6f6f6,
-    0 0.05em 0 #f6f6f6, 0 -0.05em 0 #f6f6f6,
-    0.1em 0 0 #f6f6f6, -0.1em 0 0 #f6f6f6,
-    0 0.1em 0 #f6f6f6, 0 -0.1em 0 #f6f6f6;
+    text-shadow: 0.05em 0 0 #f8f8f8, -0.05em 0 0 #f8f8f8,
+    0 0.05em 0 #f8f8f8, 0 -0.05em 0 #f8f8f8,
+    0.1em 0 0 #f8f8f8, -0.1em 0 0 #f8f8f8,
+    0 0.1em 0 #f8f8f8, 0 -0.1em 0 #f8f8f8;
     background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
     background-repeat: repeat-x;
     background-position: bottom 0.05em center;
     background-size: 100% 0.05em;
 }
+a.btn-text-white,
 .field--text-content a:hover,
+.field--info-event .info-extra a:hover,
 .taxonomy-tag a:hover,
-.paragraph--type--bp-simple .text-formatted a:hover, .link:hover {
-    text-decoration:none;
+.paragraph--type--bp-simple .text-formatted a:hover,
+.link:hover {
+    text-decoration: none;
     text-shadow: none;
     background-image: none;
 }
 .field--text-content a:focus,
 .taxonomy-tag a:focus,
-.paragraph--type--bp-simple .text-formatted a:focus, .link:focus {
+.paragraph--type--bp-simple .text-formatted a:focus,
+.link:focus {
     color: #fff;
     text-shadow: none;
     background-image: none;
-    background-color: #985343;
+    background-color: #A05646;
 }
 .text-formatted a,
 .paragraph--type--bp-tabs .text-formatted a {
     text-decoration: none;
-    text-shadow: 0.05em 0 0 #e5e5e4, -0.05em 0 0 #e5e5e4,
-    0 0.05em 0 #e5e5e4, 0 -0.05em 0 #e5e5e4,
-    0.1em 0 0 #e5e5e4, -0.1em 0 0 #e5e5e4,
-    0 0.1em 0 #e5e5e4, 0 -0.1em 0 #e5e5e4;
+    text-shadow: 0.05em 0 0 #ebebeb, -0.05em 0 0 #ebebeb,
+    0 0.05em 0 #ebebeb, 0 -0.05em 0 #ebebeb,
+    0.1em 0 0 #ebebeb, -0.1em 0 0 #ebebeb,
+    0 0.1em 0 #ebebeb, 0 -0.1em 0 #ebebeb;
     background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
     background-repeat: repeat-x;
     background-position: bottom 0.05em center;
@@ -266,16 +275,17 @@ a:hover {
     text-shadow: none;
     background-image: none;
 }
-.paragraph__column .nav-tabs a.nav-link:hover, 
+.paragraph__column .nav-tabs a.nav-link:hover,
 .paragraph__column .nav-tabs a.nav-link:focus {
     text-shadow: #914f40 1px 0px 0px, 0px 2px 2px rgb(51 22 14 / 0%);
     color: #914F40;
-    outline:0;
+    outline: 0;
 }
 .paragraph__column .nav-tabs .nav-item {
-    outline:0;
+    outline: 0;
 }
-#navbar-main .nav-link, #navbar-main .link {
+#navbar-main .nav-link,
+#navbar-main .link {
     text-shadow: none;
     background-image: none;
     outline: 0;
@@ -286,7 +296,7 @@ a:hover {
     color: #fff;
     text-shadow: none;
     background-image: none;
-    background-color: #985343;
+    background-color: #A05646;
 }
 .card a.btn {
     text-shadow: none;
@@ -302,7 +312,7 @@ body,
 #main-wrapper,
 .region-primary-menu .menu-item a.is-active,
 .region-primary-menu .menu-item--active-trail a {
-    background-color: #f6f6f6;
+    background-color: #f8f8f8;
 }
 .card-soup.responsive .card.nav-item,
 .nav-tabs .nav-link,
@@ -315,24 +325,38 @@ body,
 .nav-tabs .nav-link.active,
 .tab-pane.fade.show.active,
 .nav-tabs .nav-link:active {
-    background-color: #e9e9e8;
+    background-color: #ebebeb;
 }
 .nav-tabs .nav-link {
-    background-color: #f6f6f6;
+    background-color: #f8f8f8;
 }
 .nav-tabs .nav-link.active {
-    border-color: #dee2e6 #f6f6f6 #e5e5e4;
+    border-color: #dee2e6 #f8f8f8 #ebebeb;
 }
 .nav-tabs .nav-link:hover {
     background-color: #bfbdba;
 }
 /* End background colors */
-
 /* Darker In Focus element */
 .paragraph.paragraph--type--in-focus-paragraph {
     background: #66797F;
 }
-
+.paragraph--type--in-focus-paragraph .view-in-focus .attachment .view-display-id-attachment_1 p {
+    font-size: 0.9375rem;
+    line-height: 1.4;
+}
+.paragraph[class*="banner"] .bg-img .link-section {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 767px) {
+    .col-sm-12.col-md-12.col-lg-3.sidebar-node,
+    .menu-siblings ul {
+        padding-left: 0;
+    }
+    ul.menu.menu-level-1 {
+        padding-left: 1em;
+    }
+}
 /* Phones */
 @media (max-width: 576px) {
     .site-name-slogan {
@@ -379,5 +403,4 @@ body,
         padding-right: 0;
     }
 }
-/* End Phones */ 
-/* Really, just testing. From home computer now. Sorry, added my token to remote-url. Does it work? */
+/* End Phones */
