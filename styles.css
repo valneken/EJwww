@@ -7,6 +7,13 @@
 }
 */
 /* End */
+
+/* Change to templates */
+/* Add the class pl-sm-0 to the following div element, the right sidebar: <div class="col-sm-12 col-md-12 col-lg-3 sidebar-node" */
+/* Add the class rounded to the following button element, the left sidebar: <button class="col-3 btn-primary class-fontawesome button js-form-submit form-submit" */
+/* Add the class no-gutters to the main nav bar (Home | About us | ...): <div class="col-12 collapse navbar-collapse" id="navbarTogglerEJ1"> */ 
+/* Change the class pl-0 to pl-md-2 in the logo/header element: <div id="header-container" class="col-8 col-sm-6 col-md-7 pl-0 pr-0 d-flex align-items-end"> */
+
 body {
     font-size: 1rem;
     line-height: 1.5;
@@ -35,6 +42,10 @@ footer a {
 .form-control:focus {
     border-color: #A05646;
     box-shadow: 0 0 0 0.1rem #A05646;
+}
+form[id*='eurojust-forms-howcanhelp'] .btn-primary {height:2rem;}
+form[id*='eurojust-forms-howcanhelp'] button.btn-primary:hover {
+    background-color: #8f892d!important;
 }
 .view-mode-full .col-md-9.col-12,
 .view-mode-full .col-12.col-md-12.col-lg-9 {
@@ -140,10 +151,10 @@ ul ul {
 }
 .paragraph__column .nav-tabs a.nav-link {
     text-shadow: #000 0px 0px 0px, 0px 2px 2px rgb(33 37 41 / 0%);
+    color: #464D53;
 }
 .nav-tabs .nav-item.show .nav-link,
 .nav-tabs a.nav-link.active {
-    color: #464D53;
     text-shadow: #000 1px 0px 0px, 0px 2px 2px rgb(33 37 41 / 0%);
 }
 .footer .nav-item {
@@ -152,8 +163,11 @@ ul ul {
 .breadcrumb-item.active {
     color: #6c757d;
 }
-a:hover {
+a, a:hover {
     color: #A05646;
+}
+.float-left a, h3 a {
+    color: #2C4754;
 }
 .field--info-event .info-date,
 .field--info-event .info-loc,
@@ -171,7 +185,10 @@ a:hover {
 .field--info-event .info-extra a,
 .field--name-field-contact-information p a,
 .field--taxonomies-tags .taxonomy-tag a,
+.label-color,
 .menu-siblings ul > li a,
+.menu-siblings ul li.menu-item.menu-item--active-trail, 
+.menu-siblings ul > li a.is-active,
 .procurement-legal-notice a,
 .related-links .item-link,
 .related-links .item-link a,
@@ -188,11 +205,14 @@ a:hover {
 .navbar-nav li:first-child {
     text-decoration: none;
 }
+.field.field--name-pressrelease-contact-details {
+    margin-bottom: 2em;
+}
 /* The below rule is temporary, to remove read more link from PR list */
-.more-link,
-.view-ej-advanced-search .label-color {
+.more-link {
     display: none;
 }
+/* .view-ej-advanced-search .label-color {display: none;}*/
 /* Paginator */
 .pagination .page-item:hover .page-link,
 .pagination [class^="pager"]:hover .page-link,
@@ -213,28 +233,50 @@ a:hover {
     display: inline-block;
     text-decoration: none;
     padding-left: .5em;
+    padding-right: .3em;
+    color: rgb(160, 86, 70, .8);
+    background-image: none;
+    background-color: #f8f8f8;
+}
+.maincontent-node .paragraph__column a[href^="http://"]:not([href^="https://www.eurojust.europa.eu"]):after,
+.maincontent-node .paragraph__column a[href^="https://"]:not([href^="https://www.eurojust.europa.eu"]):after {
+    background-color: #ebebeb;
 }
 /* FontAwesome icon to accompany links to PDF files */
 .maincontent-node a[href$=".pdf"]:after {
     content: "\f1c1" !important;
     font-family: 'Font Awesome 5 Free';
     font-weight: normal !important;
+    display: inline-block;
+    text-decoration: none;
     padding-left: .5em;
+    padding-right: .3em;
+    background-image: none;
+    background-color: #f8f8f8;
+}
+.maincontent-node .paragraph__column a[href$=".pdf"]:after {
+    background-color: #ebebeb;
+}
+.maincontent-node .file--application-pdf a[href$=".pdf"]:after {
+    background-color: #fff;
 }
 
 /* Fancy link underline */
 .field--text-content a,
 .field--info-event .info-extra a,
+.file--application-pdf a,
 .taxonomy-tag a,
 .paragraph--type--bp-simple .text-formatted a,
 .link,
-.breadcrumb-item a {
+.breadcrumb-item a,
+.text-formatted a {
     text-decoration: none;
     text-shadow: 0.05em 0 0 #f8f8f8, -0.05em 0 0 #f8f8f8,
     0 0.05em 0 #f8f8f8, 0 -0.05em 0 #f8f8f8,
     0.1em 0 0 #f8f8f8, -0.1em 0 0 #f8f8f8,
     0 0.1em 0 #f8f8f8, 0 -0.1em 0 #f8f8f8;
     background-image: linear-gradient(to right, currentColor 0%, currentColor 100%);
+    background-image: linear-gradient(to right, #A05646 0%, #A05646 100%);
     background-repeat: repeat-x;
     background-position: bottom 0.05em center;
     background-size: 100% 0.05em;
@@ -258,7 +300,6 @@ a.btn-text-white,
     background-image: none;
     background-color: #A05646;
 }
-.text-formatted a,
 .paragraph--type--bp-tabs .text-formatted a {
     text-decoration: none;
     text-shadow: 0.05em 0 0 #ebebeb, -0.05em 0 0 #ebebeb,
@@ -270,7 +311,13 @@ a.btn-text-white,
     background-position: bottom 0.05em center;
     background-size: 100% 0.05em;
 }
-.text-formatted a:hover,
+#drupal-modal .text-formatted a, #drupal-modal .taxonomy-tag a {
+    text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
+    0 0.05em 0 #fff, 0 -0.05em 0 #fff,
+    0.1em 0 0 #fff, -0.1em 0 0 #fff,
+    0 0.1em 0 #fff, 0 -0.1em 0 #fff;
+}
+a:hover, .text-formatted a:hover,
 .paragraph--type--bp-tabs .text-formatted a:hover {
     text-shadow: none;
     background-image: none;
