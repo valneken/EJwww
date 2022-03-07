@@ -7,13 +7,11 @@
 }
 */
 /* End */
-
 /* Change to templates */
 /* Add the class pl-sm-0 to the following div element, the right sidebar: <div class="col-sm-12 col-md-12 col-lg-3 sidebar-node" */
 /* Add the class rounded to the following button element, the left sidebar: <button class="col-3 btn-primary class-fontawesome button js-form-submit form-submit" */
-/* Add the class no-gutters to the main nav bar (Home | About us | ...): <div class="col-12 collapse navbar-collapse" id="navbarTogglerEJ1"> */ 
+/* Add the class no-gutters to the main nav bar (Home | About us | ...): <div class="col-12 collapse navbar-collapse" id="navbarTogglerEJ1"> */
 /* Change the class pl-0 to pl-md-2 in the logo/header element: <div id="header-container" class="col-8 col-sm-6 col-md-7 pl-0 pr-0 d-flex align-items-end"> */
-
 body {
     font-size: 1rem;
     line-height: 1.5;
@@ -43,9 +41,11 @@ footer a {
     border-color: #A05646;
     box-shadow: 0 0 0 0.1rem #A05646;
 }
-form[id*='eurojust-forms-howcanhelp'] .btn-primary {height:2rem;}
+form[id*='eurojust-forms-howcanhelp'] .btn-primary {
+    height: 2rem;
+}
 form[id*='eurojust-forms-howcanhelp'] button.btn-primary:hover {
-    background-color: #8f892d!important;
+    background-color: #797424!important;
 }
 .view-mode-full .col-md-9.col-12,
 .view-mode-full .col-12.col-md-12.col-lg-9 {
@@ -113,6 +113,7 @@ p + h2 {
 h3.block-title {
     text-decoration: none;
 }
+.field--procurement-title h3,
 .view-mode-tab_display h3,
 .view-mode-content_list_with_image h3,
 .view-ej-advanced-search h3,
@@ -137,6 +138,19 @@ ul + h3 {
     line-height: 1.3;
     font-size: 1rem;
 }
+.lead {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+.font-weight-bold {
+    font-weight: 600!important;
+}
+.font-weight-bolder {
+    font-weight: 700!important;
+}
+.card i {
+    color: #205368;
+}
 ol ol,
 ol ul,
 ul ol,
@@ -145,6 +159,15 @@ ul ul {
 }
 .region-content li {
     margin-bottom: 1rem;
+}
+.booklet-menu ul.menu-2 {
+    margin-top: .25em;
+}
+.booklet-menu .menu-1 li {
+    margin-bottom: 0.25em;
+}
+.list-group .list-group-item {
+    margin-bottom: 0;
 }
 .field--info-page {
     font-size: 0.9rem;
@@ -163,10 +186,16 @@ ul ul {
 .breadcrumb-item.active {
     color: #6c757d;
 }
-a, a:hover {
+a,
+a:hover {
     color: #A05646;
 }
-.float-left a, h3 a {
+h3 a,
+.float-left a,
+.field--documents-translations a,
+.paragraph__column a,
+.paragraph__column .toc a,
+a.booklet-link {
     color: #2C4754;
 }
 .field--info-event .info-date,
@@ -187,7 +216,7 @@ a, a:hover {
 .field--taxonomies-tags .taxonomy-tag a,
 .label-color,
 .menu-siblings ul > li a,
-.menu-siblings ul li.menu-item.menu-item--active-trail, 
+.menu-siblings ul li.menu-item.menu-item--active-trail,
 .menu-siblings ul > li a.is-active,
 .procurement-legal-notice a,
 .related-links .item-link,
@@ -201,6 +230,23 @@ a, a:hover {
 }
 .btn {
     text-decoration: none!important;
+}
+.btn-primary {
+    background-color: #A05646;
+    border-color: #A05646;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #83473A;
+    border-color: #83473A;
+    box-shadow: none;
+}
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #A05646;
+    border-color: #A05646;
 }
 .navbar-nav li:first-child {
     text-decoration: none;
@@ -223,7 +269,11 @@ a, a:hover {
 .pagination [class^="pager"] .page-link {
     padding: 5px 8px;
 }
+.bg-clr-mist {
+    background-color: #ebebeb;
+}
 /* FontAwesome icon to accompany outbound links */
+/* The solution below uses the freely available FontAwesome external icon with opacity applied to counteract the thickness of the icon lines. A preferrable solution would be to find an appropriate SVG with the width of the line identical to the PDF icon */
 .maincontent-node a[href^="http://"]:not([href^="https://www.eurojust.europa.eu"]):after,
 .maincontent-node a[href^="https://"]:not([href^="https://www.eurojust.europa.eu"]):after {
     content: "\f35d";
@@ -284,9 +334,10 @@ a, a:hover {
 a.btn-text-white,
 .field--text-content a:hover,
 .field--info-event .info-extra a:hover,
+.link:hover,
 .taxonomy-tag a:hover,
 .paragraph--type--bp-simple .text-formatted a:hover,
-.link:hover {
+.paragraph__column .toc a {
     text-decoration: none;
     text-shadow: none;
     background-image: none;
@@ -300,7 +351,9 @@ a.btn-text-white,
     background-image: none;
     background-color: #A05646;
 }
-.paragraph--type--bp-tabs .text-formatted a {
+.paragraph--type--bp-tabs .text-formatted a,
+.jumbotron a,
+.card-body a {
     text-decoration: none;
     text-shadow: 0.05em 0 0 #ebebeb, -0.05em 0 0 #ebebeb,
     0 0.05em 0 #ebebeb, 0 -0.05em 0 #ebebeb,
@@ -311,21 +364,27 @@ a.btn-text-white,
     background-position: bottom 0.05em center;
     background-size: 100% 0.05em;
 }
-#drupal-modal .text-formatted a, #drupal-modal .taxonomy-tag a {
+#drupal-modal .text-formatted a,
+#drupal-modal .taxonomy-tag a {
     text-shadow: 0.05em 0 0 #fff, -0.05em 0 0 #fff,
     0 0.05em 0 #fff, 0 -0.05em 0 #fff,
     0.1em 0 0 #fff, -0.1em 0 0 #fff,
     0 0.1em 0 #fff, 0 -0.1em 0 #fff;
 }
-a:hover, .text-formatted a:hover,
+.bg-white a,
+.bg-white a.stretched-link {
+    text-shadow: none;
+}
+a:hover,
+.text-formatted a:hover,
 .paragraph--type--bp-tabs .text-formatted a:hover {
     text-shadow: none;
     background-image: none;
 }
 .paragraph__column .nav-tabs a.nav-link:hover,
 .paragraph__column .nav-tabs a.nav-link:focus {
-    text-shadow: #914f40 1px 0px 0px, 0px 2px 2px rgb(51 22 14 / 0%);
-    color: #914F40;
+    text-shadow: #464D53 1px 0px 0px, 0px 2px 2px rgb(51 22 14 / 0%);
+    color: #464D53;
     outline: 0;
 }
 .paragraph__column .nav-tabs .nav-item {
@@ -339,7 +398,8 @@ a:hover, .text-formatted a:hover,
 }
 .text-formatted a:focus,
 .paragraph--type--bp-tabs .text-formatted a:focus,
-.content .link:focus {
+.content .link:focus,
+.jumbotron a.btn {
     color: #fff;
     text-shadow: none;
     background-image: none;
@@ -349,6 +409,10 @@ a:hover, .text-formatted a:hover,
     text-shadow: none;
     background-image: none;
     background-repeat: no-repeat;
+}
+.paragraph__column .toc a:hover {
+    text-decoration: underline;
+    color: #A05646;
 }
 
 /* Slightly lighter background colors */
@@ -367,6 +431,7 @@ body,
     background-color: #DDDCDA;
 }
 .card-body,
+.jumbotron,
 .tab-content > .tab-pane,
 .tab-content.responsive > .tab-pane,
 .nav-tabs .nav-link.active,
@@ -395,7 +460,15 @@ body,
 .paragraph[class*="banner"] .bg-img .link-section {
     background-color: rgba(0, 0, 0, 0.6);
 }
+@media (max-width: 818px) {
+    .menu-siblings {
+        margin-left: 0;
+    }
+}
 @media (max-width: 767px) {
+    .menu-siblings {
+        margin-left: 1em;
+    }
     .col-sm-12.col-md-12.col-lg-3.sidebar-node,
     .menu-siblings ul {
         padding-left: 0;
@@ -439,6 +512,9 @@ body,
     }
     .view-in-focus h3 {
         margin-top: 1em;
+    }
+    .covid_box h3 {
+        margin-top: -2.5em;
     }
     .field--text-content .image-content {
         float: none;
