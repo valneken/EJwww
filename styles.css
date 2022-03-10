@@ -230,6 +230,8 @@ a.booklet-link {
 }
 .btn {
     text-decoration: none!important;
+    text-shadow: none !important;
+    background-image: none !important;
 }
 .btn-primary {
     background-color: #A05646;
