@@ -1,14 +1,4 @@
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-var el = document.getElementById("modal-one");
-  el.classList.add("open");   
-document.querySelector('#modal-exit').addEventListener('click', function (e) {
-e.preventDefault();
-  var el = document.getElementById("modal-one");
-  el.classList.remove("open");    
-});
-});
-</script>
+
 
 
 
@@ -57,11 +47,7 @@ opacity: 30%;
   cursor: pointer;
 }
 </style>
-<div class="modal" id="modal-one">
-   <div class="modal-bg modal-exit">&#160;<br/>&#160;</div>
-   <div class="modal-container">
+
       <h1>Amazing Modal</h1>
       <h2>Pure Vanilla JavaScript</h2> 
       <button class="modal-close modal-exit" id="modal-exit">X</button>
-</div>
-</div>
