@@ -17,7 +17,7 @@
   justify-content: center;
 }
 .modal.open {
-  visibility: visible;
+  visibility: hidden;
   opacity: 1;
   transition-delay: 0s;
 }
