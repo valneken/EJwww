@@ -50,4 +50,4 @@ opacity: 30%;
 
       <h1>Amazing Modal</h1>
       <h2>Pure Vanilla JavaScript</h2> 
-      <button class="modal-close modal-exit" id="modal-exit">X</button>
+      
