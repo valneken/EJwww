@@ -48,6 +48,6 @@ opacity: 30%;
 }
 </style>
 
-      <h1>Amazing Modal</h1>
+      <h1>Test Modal</h1>
       <h2>Pure Vanilla JavaScript</h2> 
       
